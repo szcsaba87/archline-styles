@@ -1,0 +1,37 @@
+
+.tree-node-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-right: 8px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 12.5px;
+  user-select: none;
+  background: white;
+}
+
+.tree-node-row--selected {
+  background: #5f98db;
+}
+
+.tree-node-toggle {
+  width: 14px;
+  display: inline-flex;
+  justify-content: center;
+  color: #000000;
+}
+
+.tree-node-label {
+  color: #3a3a3a;
+  
+}
+
+.tree-node-label--empty {
+  color: #9a9a9a;
+}
+
+.tree-node-label--pinned {
+  color: #3a3a3a;
+
+}
