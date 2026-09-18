@@ -5,6 +5,7 @@ import {
   Folder,
   List,
   LayoutGrid,
+  AlignJustify,
   ChevronDown,
   ChevronsUp,
   Pin,
@@ -31,7 +32,7 @@ export default function StylesPanel() {
   const [selectedItemId, setSelectedItemId] = useState("w8");
   const [expandedIds, setExpandedIds] = useState(new Set(["wall"]));
   const [itemMenu, setItemMenu] = useState(null); // { itemId, items, top, left }
-  const [viewMode, setViewMode] = useState("grid"); // "grid" | "list"
+  const [viewMode, setViewMode] = useState("grid"); // "grid" | "list" | "compact"
   const [showSearchSamples, setShowSearchSamples] = useState(false);
   const [activeDisciplineId, setActiveDisciplineId] = useState("architecture");
   const [disciplineMenuOpen, setDisciplineMenuOpen] = useState(false);
@@ -159,12 +160,16 @@ export default function StylesPanel() {
         <button
           className="styles-panel__icon-button"
           onClick={() =>
-            setViewMode((mode) => (mode === "grid" ? "list" : "grid"))
+            setViewMode((mode) =>
+              mode === "grid" ? "list" : mode === "list" ? "compact" : "grid"
+            )
           }
-          aria-label="Toggle list view"
+          aria-label="Toggle view mode"
         >
           {viewMode === "grid" ? (
             <List size={13} color="#6b6b6b" />
+          ) : viewMode === "list" ? (
+            <AlignJustify size={13} color="#6b6b6b" />
           ) : (
             <LayoutGrid size={13} color="#6b6b6b" />
           )}
@@ -278,7 +283,7 @@ export default function StylesPanel() {
         <div
           className={`styles-panel__grid styles-panel-scroll ${
             viewMode === "list" ? "styles-panel__grid--list" : ""
-          }`}
+          } ${viewMode === "compact" ? "styles-panel__grid--compact" : ""}`}
           ref={gridRef}
         >
           {filteredItems.map((item) => {
@@ -288,6 +293,8 @@ export default function StylesPanel() {
                 key={item.id}
                 className={`styles-panel__grid-item ${
                   viewMode === "list" ? "styles-panel__grid-item--list" : ""
+                } ${
+                  viewMode === "compact" ? "styles-panel__grid-item--compact" : ""
                 } ${isSelected ? "styles-panel__grid-item--selected" : ""}`}
                 onClick={() => setSelectedItemId(item.id)}
               >
@@ -303,13 +310,15 @@ export default function StylesPanel() {
                 >
                   <Pencil size={12} color="#4a4a4a" />
                 </button>
-                <img
-                  className="styles-panel__thumb"
-                  src={placeholderUrl()}
-                  alt={item.lines.join(" ")}
-                  width={84}
-                  height={112}
-                />
+                {viewMode !== "compact" && (
+                  <img
+                    className="styles-panel__thumb"
+                    src={placeholderUrl()}
+                    alt={item.lines.join(" ")}
+                    width={84}
+                    height={112}
+                  />
+                )}
                 <div className="styles-panel__caption">
                   <div>{item.lines[0]}</div>
                   <div>{item.lines[1]}</div>

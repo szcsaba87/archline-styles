@@ -1,3 +1,5 @@
+import { sampleTreeData } from "./sampleTreeData";
+
 // Each leaf category can hold "items" — the thumbnails shown in the right
 // pane. Real product data would come from the CAD engine; here each item
 // just points at a placeholder image, with a two-line caption underneath.
@@ -94,18 +96,12 @@ export const disciplines = [
     id: "structure",
     label: "Structure",
     icon: "Boxes",
-    items: Array.from({ length: 8 }, (_, i) => ({
-      id: `structure-sample-${i + 1}`,
-      lines: ["Sample", `Item ${i + 1}`],
-    })),
+    children: sampleTreeData,
   },
   {
     id: "mep",
     label: "MEP",
     icon: "Zap",
-    items: Array.from({ length: 8 }, (_, i) => ({
-      id: `mep-sample-${i + 1}`,
-      lines: ["Sample", `Item ${i + 1}`],
-    })),
+    children: sampleTreeData,
   },
 ];
