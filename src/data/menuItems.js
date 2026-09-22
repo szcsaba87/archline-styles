@@ -26,8 +26,6 @@ export const menuItems = [
     variant: "badge",
     badgeColor: "#e07b39",
   },
-  { id: "add-dashboard", label: "Add to Dashboard", icon: "ThumbsUp", color: "#4a4a4a" },
-  { id: "change-material", label: "Change picture material", icon: "Folder", color: "#4a4a4a" },
 ];
 
 // Shown when clicking the toolbar's folder icon. Reuses the exact same

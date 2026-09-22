@@ -12,7 +12,7 @@
   flex-shrink: 0;
 }
 
-.styles-panel__caption-lead {
+.browser-panel__caption-lead {
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -34,7 +34,7 @@
   border-radius: 1px;
 }
 
-.styles-panel {
+.browser-panel {
   width: 420px;
   height: 720px;
   background: #f2f2f2;
@@ -45,7 +45,7 @@
 }
 
 /* Title bar */
-.styles-panel__titlebar {
+.browser-panel__titlebar {
   height: 26px;
   background: #e6e6e6;
   border-bottom: 1px solid #cfcfcf;
@@ -57,19 +57,19 @@
   font-weight: 600;
 }
 
-.styles-panel__titlebar-icons {
+.browser-panel__titlebar-icons {
   display: flex;
   gap: 8px;
 }
 
 /* Active style summary / dropdown */
-.styles-panel__summary-row {
+.browser-panel__summary-row {
   padding: 8px;
   background: white;
 
 }
 
-.styles-panel__summary {
+.browser-panel__summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -80,23 +80,23 @@
   cursor: pointer;
 }
 
-.styles-panel__summary-text {
+.browser-panel__summary-text {
   text-align: center;
   flex: 1;
 }
 
-.styles-panel__summary-category {
+.browser-panel__summary-category {
   font-size: 12px;
   color: #3a3a3a;
 }
 
-.styles-panel__summary-current {
+.browser-panel__summary-current {
   font-size: 12.5px;
   color: #3a3a3a;
 }
 
 /* Search row */
-.styles-panel__search-row {
+.browser-panel__search-row {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -106,7 +106,7 @@
 
 }
 
-.styles-panel__search-box {
+.browser-panel__search-box {
   flex: 1;
   display: flex;
   align-items: center;
@@ -117,7 +117,7 @@
   padding: 3px 8px;
 }
 
-.styles-panel__search-input {
+.browser-panel__search-input {
   flex: 1;
   border: none;
   outline: none;
@@ -125,7 +125,7 @@
   background: transparent;
 }
 
-.styles-panel__icon-button {
+.browser-panel__icon-button {
   width: 26px;
   height: 26px;
   display: flex;
@@ -138,7 +138,7 @@
 }
 
 /* "Recent" collapse bar */
-.styles-panel__recent-bar {
+.browser-panel__recent-bar {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -151,13 +151,13 @@
 }
 
 /* Body: tree + grid */
-.styles-panel__body {
+.browser-panel__body {
   flex: 1;
   display: flex;
   overflow: hidden;
 }
 
-.styles-panel__tree {
+.browser-panel__tree {
   width: 168px;
   border-right: 1px solid #d5d5d5;
   overflow-y: auto;
@@ -166,25 +166,25 @@
 }
 
 /* Active discipline row (Architecture / Structure / MEP switcher) */
-.styles-panel__discipline-wrapper {
+.browser-panel__discipline-wrapper {
   position: relative;
 }
 
-.styles-panel__discipline-icon {
+.browser-panel__discipline-icon {
   color: #000000;
   flex-shrink: 0;
 }
 
-.styles-panel__discipline-row {
+.browser-panel__discipline-row {
   cursor: pointer;
 }
 
-.styles-panel__discipline-label {
+.browser-panel__discipline-label {
   flex: 1;
   font-weight: 700;
 }
 
-.styles-panel__discipline-arrow {
+.browser-panel__discipline-arrow {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -203,7 +203,7 @@
   z-index: 40;
 }
 
-.styles-panel__discipline-dropdown {
+.browser-panel__discipline-dropdown {
   position: absolute;
   top: 100%;
   left: 8px;
@@ -216,7 +216,7 @@
   z-index: 41;
 }
 
-.styles-panel__discipline-option {
+.browser-panel__discipline-option {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -226,21 +226,21 @@
   cursor: pointer;
 }
 
-.styles-panel__discipline-option:hover {
+.browser-panel__discipline-option:hover {
   background: #cfe4fb;
 }
 
-.styles-panel__discipline-option--active {
+.browser-panel__discipline-option--active {
   font-weight: 600;
   color: #3a3a3a;
 }
 
-.styles-panel__discipline-option-icon {
+.browser-panel__discipline-option-icon {
   color: #3a3a3a;
   flex-shrink: 0;
 }
 
-.styles-panel__grid {
+.browser-panel__grid {
   flex: 1;
   min-width: 0;
   overflow-y: auto;
@@ -254,7 +254,7 @@
   background: #fafafa;
 }
 
-.styles-panel__grid-item {
+.browser-panel__grid-item {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -266,7 +266,7 @@
   border: 1px solid transparent;
 }
 
-.styles-panel__item-edit-btn {
+.browser-panel__item-edit-btn {
   position: absolute;
   top: 4px;
   right: 4px;
@@ -285,25 +285,25 @@
   transition: opacity 0.12s ease-in-out;
 }
 
-.styles-panel__grid-item:hover .styles-panel__item-edit-btn,
-.styles-panel__item-edit-btn--open {
+.browser-panel__grid-item:hover .browser-panel__item-edit-btn,
+.browser-panel__item-edit-btn--open {
   opacity: 1;
   pointer-events: auto;
 }
 
-.styles-panel__grid-item--selected {
+.browser-panel__grid-item--selected {
   background: #cfe4fb;
   border-color: #7fb2e8;
 }
 
 /* List view */
-.styles-panel__grid--list {
+.browser-panel__grid--list {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
-.styles-panel__grid-item--list {
+.browser-panel__grid-item--list {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
@@ -312,21 +312,21 @@
   padding: 4px 6px;
 }
 
-.styles-panel__grid-item--list .styles-panel__thumb {
+.browser-panel__grid-item--list .browser-panel__thumb {
   order: 1;
   width: 40px;
   height: 54px;
   flex-shrink: 0;
 }
 
-.styles-panel__grid-item--list .styles-panel__caption {
+.browser-panel__grid-item--list .browser-panel__caption {
   order: 2;
   flex: 1;
   text-align: left;
   padding-right: 4px;
 }
 
-.styles-panel__grid-item--list .styles-panel__item-edit-btn {
+.browser-panel__grid-item--list .browser-panel__item-edit-btn {
   order: 3;
   position: static;
   margin-left: auto;
@@ -334,14 +334,14 @@
 }
 
 /* Compact view: text-only, no thumbnails, denser rows */
-.styles-panel__grid--compact {
+.browser-panel__grid--compact {
   display: flex;
   flex-direction: column;
   gap: 0;
   padding: 4px;
 }
 
-.styles-panel__grid-item--compact {
+.browser-panel__grid-item--compact {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
@@ -351,7 +351,7 @@
   border-radius: 0;
 }
 
-.styles-panel__grid-item--compact .styles-panel__caption {
+.browser-panel__grid-item--compact .browser-panel__caption {
   order: 1;
   flex: 1;
   text-align: left;
@@ -362,7 +362,7 @@
   text-overflow: ellipsis;
 }
 
-.styles-panel__grid-item--compact .styles-panel__item-edit-btn {
+.browser-panel__grid-item--compact .browser-panel__item-edit-btn {
   order: 2;
   position: static;
   margin-left: auto;
@@ -373,14 +373,14 @@
   box-shadow: none;
 }
 
-.styles-panel__thumb {
+.browser-panel__thumb {
   border: 1px solid #b0b0b0;
   background: #fff;
   max-width: 100%;
   height: auto;
 }
 
-.styles-panel__caption {
+.browser-panel__caption {
   font-size: 11px;
   color: #3a3a3a;
   text-align: center;
@@ -388,24 +388,24 @@
 }
 
 /* Thin scrollbars, shared by tree + grid panes */
-.styles-panel-scroll {
+.browser-panel-scroll {
   scrollbar-width: thin; /* Firefox */
   background-color: white;
 }
 
-.styles-panel-scroll::-webkit-scrollbar {
+.browser-panel-scroll::-webkit-scrollbar {
   width: 6px;
 }
 
-.styles-panel-scroll::-webkit-scrollbar-track {
+.browser-panel-scroll::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.styles-panel-scroll::-webkit-scrollbar-thumb {
+.browser-panel-scroll::-webkit-scrollbar-thumb {
   background: #c2c2c2;
   border-radius: 3px;
 }
 
-.styles-panel-scroll::-webkit-scrollbar-thumb:hover {
+.browser-panel-scroll::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }

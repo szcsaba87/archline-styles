@@ -1,0 +1,42 @@
+.notes-panel {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #3a3a3a;
+}
+
+.notes-panel__heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
+
+.notes-panel__section {
+  margin-bottom: 18px;
+}
+
+.notes-panel__section:last-child {
+  margin-bottom: 0;
+}
+
+.notes-panel__section h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.notes-panel__section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.notes-panel__section li {
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.notes-panel__section li:last-child {
+  margin-bottom: 0;
+}
