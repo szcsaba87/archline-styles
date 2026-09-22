@@ -1,3 +1,39 @@
+/* Style-kind symbol colors — swap these to restyle every symbol at once */
+:root {
+  --style-icon-factory-color: #e07b39; /* factory style: orange */
+  --style-icon-user-color: #3f7fac; /* user style: blue */
+  --style-icon-project-color: #3f7fac; /* project style: blue outline */
+}
+
+.style-icon {
+  width: 8px;
+  height: 8px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.styles-panel__caption-lead {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.style-icon--factory {
+  background: var(--style-icon-factory-color);
+  transform: rotate(45deg);
+}
+
+.style-icon--user {
+  background: var(--style-icon-user-color);
+  border-radius: 1px;
+}
+
+.style-icon--project {
+  background: transparent;
+  border: 1.5px solid var(--style-icon-project-color);
+  border-radius: 1px;
+}
+
 .styles-panel {
   width: 420px;
   height: 720px;
@@ -212,7 +248,8 @@
   padding: 12px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  row-gap: 6px;
+  column-gap: 14px;
   align-content: start;
   background: #fafafa;
 }
@@ -263,7 +300,7 @@
 .styles-panel__grid--list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .styles-panel__grid-item--list {
@@ -271,7 +308,8 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  gap: 10px;
+  gap: 6px;
+  padding: 4px 6px;
 }
 
 .styles-panel__grid-item--list .styles-panel__thumb {
@@ -283,8 +321,9 @@
 
 .styles-panel__grid-item--list .styles-panel__caption {
   order: 2;
-  text-align: left;
   flex: 1;
+  text-align: left;
+  padding-right: 4px;
 }
 
 .styles-panel__grid-item--list .styles-panel__item-edit-btn {
@@ -298,7 +337,7 @@
 .styles-panel__grid--compact {
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 0;
   padding: 4px;
 }
 
@@ -308,34 +347,30 @@
   justify-content: flex-start;
   width: 100%;
   gap: 6px;
-  padding: 3px 6px;
+  padding: 1px 6px;
   border-radius: 0;
 }
 
 .styles-panel__grid-item--compact .styles-panel__caption {
   order: 1;
-  display: flex;
-  flex-direction: row;
-  gap: 6px;
-  text-align: left;
   flex: 1;
+  text-align: left;
   font-size: 11px;
   line-height: 1.2;
-}
-
-.styles-panel__grid-item--compact .styles-panel__caption > div {
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .styles-panel__grid-item--compact .styles-panel__item-edit-btn {
   order: 2;
   position: static;
   margin-left: auto;
-  width: 16px;
-  height: 16px;
-  box-shadow: none;
-  border: none;
+  width: 20px;
+  height: 20px;
   background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .styles-panel__thumb {

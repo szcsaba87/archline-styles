@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import {
   Search,
   Pencil,
-  Folder,
+  Settings,
   List,
   LayoutGrid,
   AlignJustify,
@@ -155,7 +155,7 @@ export default function StylesPanel() {
           onClick={(e) => openContextMenu(e, folderMenuItems)}
           aria-label="Folder options"
         >
-          <Folder size={13} color="#6b6b6b" />
+          <Settings size={13} color="#6b6b6b" />
         </button>
         <button
           className="styles-panel__icon-button"
@@ -308,7 +308,10 @@ export default function StylesPanel() {
                   onClick={(e) => openContextMenu(e, menuItems, item.id)}
                   aria-label="Item options"
                 >
-                  <Pencil size={12} color="#4a4a4a" />
+                  <Pencil
+                    size={viewMode === "compact" ? 15 : 12}
+                    color={viewMode === "compact" ? "#232323" : "#4a4a4a"}
+                  />
                 </button>
                 {viewMode !== "compact" && (
                   <img
@@ -320,8 +323,14 @@ export default function StylesPanel() {
                   />
                 )}
                 <div className="styles-panel__caption">
-                  <div>{item.lines[0]}</div>
-                  <div>{item.lines[1]}</div>
+                  <span className="styles-panel__caption-lead">
+                    <span
+                      className={`style-icon style-icon--${item.styleKind}`}
+                      aria-hidden="true"
+                    />
+                    {item.lines[0]}
+                  </span>{" "}
+                  {item.lines[1]}
                 </div>
               </div>
             );
